@@ -96,14 +96,31 @@
 //   return n1.toString() + n2.toString();
 // }
 // void
-function add(n1, n2) {
-    return n1 + n2;
-}
+// function add(n1: number, n2: number) {
+//   return n1 + n2;
+// }
 // function printResult(num: number): void {
 //   console.log("Result" + num); // it doesn't return anything
 // }
 // printResult(add(5, 12)); // return Result17
 // console.log(printResult(add(5, 12))); //return undefined
-var combineValues; // it will check value is function or not. if you didn't assign, it pass well, but give you error on page.
-combineValues = 5;
-combineValues = printResult;
+// let combineValues: Function; // it will check value is function or not. if you didn't assign, it pass well, but give you error on page.
+// // combineValues = add;
+// // combineValues = 5;
+//unknown
+var userInput;
+// let userInput: any;
+var userName;
+userInput = 5;
+userInput = "Max";
+// you can use if and check your type and change type same as userName
+if (typeof userInput === "string") {
+    userName = userInput;
+}
+// userName = userInput; // If you assign unknown to userInput then It will give you error. But if you use let userInput : any it wll work fine.
+//The Never Type
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateError("An error occurred!", 500);
+console.log(result);

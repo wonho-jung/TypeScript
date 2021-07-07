@@ -12,10 +12,11 @@ coretype
 <li>ANY : *</li><p>Any kind of value, no specific type assignment</p>
 <li>void : let unusable: void = undefined</li><p>it doesn't return but undefined, null. If function didn't return anything then it's type of void</p>
 <li>unknown</li><p>you can store anyvalue without error. but it's not same as any. unknown is abit more restrictive than any.</p>
+<li>never</li><p>you can store anyvalue without error. but it's not same as any. unknown is abit more restrictive than any.</p>
 
 </ul>
 <br/>
 How different are TypeScript and JavaScript?
 <ul>
-<li>JavaScript uses "dynamic types", TypeScript uses "static types"</li>
+<li>If you use set function as never it never return error or value. it looks like infinite loop.</li>
 </ul>

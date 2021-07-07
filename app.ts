@@ -137,3 +137,11 @@ if (typeof userInput === "string") {
   userName = userInput;
 }
 // userName = userInput; // If you assign unknown to userInput then It will give you error. But if you use let userInput : any it wll work fine.
+
+//The Never Type
+function generateError(message: string, code: number) {
+  throw { message: message, errorCode: code };
+}
+
+const result = generateError("An error occurred!", 500);
+console.log(result);
