@@ -125,23 +125,35 @@
 
 //unknown
 
-let userInput: unknown;
-// let userInput: any;
-let userName: string;
+// let userInput: unknown;
+// // let userInput: any;
+// let userName: string;
 
-userInput = 5;
-userInput = "Max";
-// you can use if and check your type and change type same as userName
+// userInput = 5;
+// userInput = "Max";
+// // you can use if and check your type and change type same as userName
 
-if (typeof userInput === "string") {
-  userName = userInput;
-}
-// userName = userInput; // If you assign unknown to userInput then It will give you error. But if you use let userInput : any it wll work fine.
+// if (typeof userInput === "string") {
+//   userName = userInput;
+// }
+// // userName = userInput; // If you assign unknown to userInput then It will give you error. But if you use let userInput : any it wll work fine.
 
-//The Never Type
-function generateError(message: string, code: number) {
-  throw { message: message, errorCode: code };
-}
+// //Never
+// function generateError(message: string, code: number):never {
+//   throw { message: message, errorCode: code };
+// }
 
-const result = generateError("An error occurred!", 500);
-console.log(result);
+// const result = generateError("An error occurred!", 500);
+// console.log(result);
+
+// Watch mode(tsc appname.ts -w)
+// If you use watch mode then you don't need to type commend "tsc yourAppname.ts" everytime on CLI
+// how to copiling the Entire Project? ans: tsc--init and commened tsc after you're done
+
+// Include and Exclude Files (tsconfig.json)
+// exclude: [
+// "node_modules"
+//],
+// "include" : [
+//     "include what you want to convert"
+// ]
